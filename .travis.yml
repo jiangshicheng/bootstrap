@@ -10,9 +10,6 @@ node_js:
   - "8"
 before_install:
   - if [[ `npm -v` != 5* ]]; then npm install -g npm@5; fi
-before_script:
-  - "sudo chown root /opt/google/chrome/chrome-sandbox"
-  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
 install:
   - bundle install --deployment --jobs=3 --retry=3
   - npm install
